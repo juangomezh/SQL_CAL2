@@ -13,20 +13,20 @@ select musicgroup.groupID from musicgroup, concerts
 where concerts.Country like "Spain";
 /*EX5*/
 select disks.Referencenumber
-	from disks, (select count(distinct contains.name) as numsongs , disks.Referencenumber as numero
-		from disks, contains where disks.Referencenumber=contains.Referencenumber group by contains.Referencenumber) as Referencenumber
+	from disks, (select count(distinct has.name) as numsongs , disks.Referencenumber as numero
+		from disks, has where disks.Referencenumber=has.Referencenumber group by has.Referencenumber) as Referencenumber
 			where numsongs>10 and disks=numero;
 select D.Referencenumber
 	from disks as D 
-		where (select count(distinct contains.name) from disks as D1 natural join contains where D1.Referencenumber=D.Referencenumber)>10;
+		where (select count(distinct has.name) from disks as D1 natural join has where D1.Referencenumber=D.Referencenumber)>10;
 /*EX6*/
 select musicgroup.* from musicgroup, musician, members, 
 	(select count(distinct members.ID) as numero, members.ID as dnis from members group by members.ID) as pp
 where members.id=dnis and musicgroup.groupID=members.groupID and numero>3;
 /*EX7*/
-select opinions.description 
-	from opinions, buy, user, (select count(distinct buy.ID) as cantidad, buy.Id codigo from buy group by buy.Referencenumber) as pp
-		where cantidad>3 and buy.ID=codigo and opinions.email=user.email and user.DNI=buy.ID;
+select opinions.opdescription 
+	from opinions, buy, customer, (select count(distinct buy.ID) as cantidad, buy.Id codigo from buy group by buy.Referencenumber) as pp
+		where cantidad>3 and buy.ID=codigo and opinions.email=user.email and customer.DNI=buy.ID;
 /*EX8*/
 --
 /*EX9*/
@@ -36,7 +36,7 @@ members.groupID=musicgroup.groupID and members.ID=musician.ID;
 /*EX10*/
 --
 /*EX11*/
-select song.*, musician.name from (((musician natural join composes) natural join song) natural join contains) natural join disks
+select song.*, musician.name from (((musician natural join composes) natural join song) natural join has) natural join disks
 where disks.genre like "Heavy Metal" and disks.year=2018;
 /*EX12*/
 select musician.name from musician, plays, instrument, musicgroup, members
@@ -53,8 +53,8 @@ where musicgroup.groupID
 		from musicgroup, perform, concerts where concerts.Code not in (select concerts.Code from concerts where concerts.Country like "Spain")
 			and concerts.Code=perform.Code and musicgroup.groupID=perform.groupID)
 	and musicgroup.groupID 
-    in(select musicgroup.groupID from musicgroup, record, disks, (select count(contains.name) as numsongs, disks.Referencenumber as disc 
-													from contains natural join disks group by contains.Referencenumber) as caca
+    in(select musicgroup.groupID from musicgroup, record, disks, (select count(has.name) as numsongs, disks.Referencenumber as disc 
+													from has natural join disks group by has.Referencenumber) as pp
 								where record.groupID=musicgroup.groupID 
 									and record.Referencenumber=Disks.Referencenumber and numsongs>10 and disc=disks.Referencenumber);
 /*EX16*/

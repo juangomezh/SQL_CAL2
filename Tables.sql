@@ -42,7 +42,7 @@ create table song
     month numeric(2,0),
 	name varchar(10),
     ID char(9),
-    primary key (ID),
+    primary key (ID, duration, name),
     foreign key (ID) references musician (ID)
 );
 create table musicgroup
@@ -62,12 +62,15 @@ create table concerts
 );
 create table Disks
 (	Referencenumber numeric(9,0),
-	format		varchar(10),
+	format		varchar(10), check (format in ("Digital","physical")),
 	title	varchar(10),
     year numeric(4,0),
     month numeric(4,0),
     day	  numeric(2,0),
     genre varchar(10),
+    typeofencoding		varchar(10), check (typeofencoding in("MP3", "AAC", "WMA", "FLAC") and format in ("Digital")),
+    Size	int,
+    typeofphy	varchar(10), check (typeofphy in ("CD", "LP") and format in ("physical")),
     primary key (Referencenumber)
 );
 
