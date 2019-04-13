@@ -92,22 +92,21 @@ insert into concerts values("Palau Sant Jordi","Barcelona","Spain",25,03,2019,"2
 insert into concerts values("Oxford Street","London","England",01,02,2002,"66554785S");
 insert into concerts values("Atlantic Avenue","Rio de Janeiro","Brazil",05,11,2018,"65233114B");
 /*perform*/
-insert into concerts values(456987123,"54786278D");
-insert into concerts values(789654132,"54786278D");
-insert into concerts values(698745123,"54786278D");
-insert into concerts values(456987123,"89765435T");
-insert into concerts values(789654132,"89765435T");
-insert into concerts values(456987123,"35554867P");
-insert into concerts values(789654132,"89256798J");
-insert into concerts values(456987123,"89256798J");
-insert into concerts values(012365487,"89256798J");
-insert into concerts values(012365487,"57934615L");
-insert into concerts values(789654132,"20201537A");
-insert into concerts values(698745123,"20201537A");
-insert into concerts values(789654132,"66554785S");
-insert into concerts values(698745123,"66554785S");
-insert into concerts values(012365487,"66554785S");
-
+insert into perform values(456987123,"54786278D");
+insert into perform values(789654132,"54786278D");
+insert into perform values(698745123,"54786278D");
+insert into perform values(456987123,"89765435T");
+insert into perform values(789654132,"89765435T");
+insert into perform values(456987123,"35554867P");
+insert into perform values(789654132,"89256798J");
+insert into perform values(456987123,"89256798J");
+insert into perform values(012365487,"89256798J");
+insert into perform values(012365487,"57934615L");
+insert into perform values(789654132,"20201537A");
+insert into perform values(698745123,"20201537A");
+insert into perform values(789654132,"66554785S");
+insert into perform values(698745123,"66554785S");
+insert into perform values(012365487,"66554785S");
 /*disk*/
 insert into disk values(154747521,"Digital","Let it be",17,02,1998,"Rock","MP3",3,null);
 insert into disk values(657984221,"Physical","Drones",25,10,2001,"Heavy Metal",null,4,"LP");
