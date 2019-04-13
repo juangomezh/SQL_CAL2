@@ -132,6 +132,13 @@ insert into tickets values(645213698,"20201537A",25,03,2019,39);
 insert into tickets values(566578112,"66554785S",01,02,2002,41);
 insert into tickets values(613214786,"65233114B",05,11,2018,83);
 /*opinions*/
+insert into opinions values("johnwick@gmail.com","Wow, that was incedible");
+insert into opinions values("thanosthedestroyer@gmail.com","Not the best I´ve listened to, but well balanced indeed");
+insert into opinions values("deku@gmail.com","Such an incredible experience");
+insert into opinions values("johnforge@gmail.com","Pretty much satisfied with band, really talented artists");
+insert into opinions values("kbakugo@gmail.com","Expected more from this group, specially with their last disc");
+insert into opinions values("thebatman@gmail.com","Epic songs, looking forward to the next one");
+insert into opinions values("woderwoman@gmail.com","Defenitely reccommended to anyone who loves rock music!");
 /*members*/
 insert into members values("78009876S",456987123);
 insert into members values("55669987S",456987123);
