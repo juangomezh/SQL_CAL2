@@ -93,8 +93,8 @@ create table tickets
     foreign key(concertcode) references concerts(Code)
 );
 create table opinions
-(	opdescription varchar(500),
-	email varchar(30),
+(	email varchar(30),
+ 	opdescription varchar(500),
     primary key (email, opdescription),
     foreign key (email) references user(email)
 );
