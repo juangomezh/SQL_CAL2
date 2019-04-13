@@ -41,11 +41,11 @@ insert into instrument values("Piano", 5264568752);
 insert into instrument values("Piano", 5267987987);
 /*plays*/
 insert into plays values("78009876S",4569874526);
-/**insert into plays values("55669987S",4565456987);*/
+insert into plays values("55669987S",4569456987);
 insert into plays values("02369874P",4562103256);
 insert into plays values("65986321W",4567775550);
 insert into plays values("22589635T",9874563215);
-/*insert into plays values("47896523R",9876896543);*/
+insert into plays values("47896523R",9877896543);
 insert into plays values("56982314Q",9872031648);
 insert into plays values("02365987T",0);
 insert into plays values("25634789A",5264568752);
@@ -112,7 +112,7 @@ insert into disk values(657984221,"Physical","Drones",25,10,2001,"Heavy Metal",n
 insert into disk values(112354897,"Physical","Muse",21,06,2003,"Jazz",null,2,"CD");
 insert into disk values(654645699,"Digital","Origins",27,12,2006,"Pop","WMA",3,null);
 insert into disk values(465487987,"Digital","Meteora",13,10,2012,"Alternative","AAC",5,null);
-/**insert into disk values(466744862,"Digital","The Hunting Party","Punk","FLAC",7,null);*/
+insert into disk values(466744862,"Digital","The Hunting Party","Punk",13,9,2009,"FLAC",7,null);
 /*user*/
 insert into user values("John","Wick","78946254G","johnwick@gmail.com",120);
 insert into user values("Thanos","Allmighty","66566512T","thanosthedestroyer@gmail.com",25);
@@ -131,13 +131,13 @@ insert into tickets values(645213698,"20201537A",25,03,2019,39);
 insert into tickets values(566578112,"66554785S",01,02,2002,41);
 insert into tickets values(613214786,"65233114B",05,11,2018,83);
 /*opinions*/
-/**insert into opinions values("johnwick@gmail.com","Wow, that was incedible");
+insert into opinions values("johnwick@gmail.com","Wow, that was incedible");
 insert into opinions values("thanosthedestroyer@gmail.com","Not the best I´ve listened to, but well balanced indeed");
 insert into opinions values("deku@gmail.com","Such an incredible experience");
 insert into opinions values("johnforge@gmail.com","Pretty much satisfied with band, really talented artists");
 insert into opinions values("kbakugo@gmail.com","Expected more from this group, specially with their last disc");
 insert into opinions values("thebatman@gmail.com","Epic songs, looking forward to the next one");
-insert into opinions values("woderwoman@gmail.com","Defenitely reccommended to anyone who loves rock music!");*/
+insert into opinions values("woderwoman@gmail.com","Defenitely reccommended to anyone who loves rock music!");
 /*members*/
 insert into members values("78009876S",456987123);
 insert into members values("55669987S",456987123);
@@ -146,38 +146,38 @@ insert into members values("65986321W",012365487);
 insert into members values("22589635T",789654132);
 insert into members values("47896523R",012365487);
 insert into members values("56982314Q",456987123);
-/*insert into members values("02365987T",78965413);*/
+insert into members values("02365987T",789654132);
 insert into members values("25634789A",698745123);
 insert into members values("44789652S",698745123);
 /*has*/
 insert into has values(154747521,120, 20, 3, 2019, "titanic", "78009876S");
 insert into has values(657984221,120, 20, 3, 2019, "titanic", "78009876S");
-/*insert into has values(613214786,120, 20, 3, 2019, "titanic", "78009876S");*/
+insert into has values(654645699,120, 20, 3, 2019, "titanic", "78009876S");
 insert into has values(154747521,345, 1, 4, 2002, "titanium", "78009876S");
-/*insert into has values(564798113,345, 1, 4, 2002, "titanium", "78009876S");*/
-/*insert into has values(613214786,234, 12, 9, 2009, "Ocean", "56982314Q");*/
+insert into has values(112354897,345, 1, 4, 2002, "titanium", "78009876S");
+insert into has values(657984221,234, 12, 9, 2009, "Ocean", "56982314Q");
 insert into has values(112354897,178, 6, 11, 2001, "Without you", "56982314Q");
 insert into has values(154747521,178, 6, 11, 2001, "Without you", "56982314Q");
 insert into has values(657984221,178, 6, 11, 2001, "Without you", "56982314Q");
 insert into has values(112354897,333, 7, 4, 2015, "Like i do", "56982314Q");
 insert into has values(112354897, 456, 12, 6, 2013, "Levels", "56982314Q");
 insert into has values(154747521,456, 12, 6, 2013, "Levels", "56982314Q");
-/*insert into has values(613214786,456, 12, 6, 2013, "Levels", "56982314Q");*/
-/*insert into has values(564798113,456, 12, 6, 2013, "Levels", "56982314Q");*/
+insert into has values(657984221,456, 12, 6, 2013, "Levels", "56982314Q");
+insert into has values(465487987,456, 12, 6, 2013, "Levels", "56982314Q");
 insert into has values(112354897,123, 6, 10, 2012, "I could be the one", "65986321W");
 insert into has values(654645699,112, 30, 7, 2010, "Scared to be lonely", "65986321W");
 insert into has values(154747521,112, 30, 7, 2010, "Scared to be lonely", "65986321W");
 insert into has values(154747521,102, 12, 8, 2003, "Wake me up", "44789652S");
-/*insert into has values(613214786,180, 31, 2, 2004,"Ease my mind", "02365987T" );*/
+insert into has values(657984221,180, 31, 2, 2004,"Ease my mind", "02365987T" );
 insert into has values(154747521,180, 31, 2, 2004,"Ease my mind", "02365987T" );
-/*insert into has values(613214786,230, 2, 5, 1999, "Revolution",  "02365987T");*/
+insert into has values(465487987,230, 2, 5, 1999, "Revolution",  "02365987T");
 insert into has values(154747521,230, 2, 5, 1999, "Revolution",  "02365987T");
-/*insert into has values(566578112,257, 31, 12, 1968, "Million voices",  "02365987T");*/
-/*insert into has values(613214786,257, 31, 12, 1968, "Million voices",  "02365987T");*/
+insert into has values(465487987,257, 31, 12, 1968, "Million voices",  "02365987T");
+insert into has values(657984221,257, 31, 12, 1968, "Million voices",  "02365987T");
 insert into has values(154747521,257, 31, 12, 1968, "Million voices",  "02365987T");
 insert into has values(112354897,257, 31, 12, 1968, "Million voices",  "02365987T");
 /*record*/
-insert into record values(154747521, 456987123);
+/*insert into record values(154747521, 456987123);
 insert into record values(657984221, 456987123);
 insert into record values(613214786, 456987123);
 insert into record values(154747521, 456987123);
@@ -213,22 +213,22 @@ insert into buytickets values(645213698,"johnwick@gmail.com");
 insert into buytickets values(566578112,"deku@gmail.com");
 insert into buytickets values(613214786,"kbakugo@gmail.com");
 /*buydisks*/
-insert into has values(154747521,"johnwick@gmail.com");
-insert into has values(657984221,"johnwick@gmail.com");
-insert into has values(465487987,"thanosthedestroyer@gmail.com");
-insert into has values(154747521,"deku@gmail.com");
-insert into has values(112354897,"deku@gmail.com");
-insert into has values(154747521,"johnforge@gmail.com");
-insert into has values(466744862,"johnforge@gmail.com");
-insert into has values(657984221,"johnforge@gmail.com");
-insert into has values(654645699,"johnforge@gmail.com");
-insert into has values(465487987,"johnforge@gmail.com");
-insert into has values(154747521,"kbakugo@gmail.com");
-insert into has values(466744862,"kbakugo@gmail.com");
-insert into has values(154747521,"thebatman@gmail.com");
-insert into has values(657984221,"woderwoman@gmail.com");
-insert into has values(112354897,"woderwoman@gmail.com");
-insert into has values(465487987,"woderwoman@gmail.com");
+insert into buydisks values(154747521,"johnwick@gmail.com");
+insert into buydisks values(657984221,"johnwick@gmail.com");
+insert into buydisks values(465487987,"thanosthedestroyer@gmail.com");
+insert into buydisks values(154747521,"deku@gmail.com");
+insert into buydisks values(112354897,"deku@gmail.com");
+insert into buydisks values(154747521,"johnforge@gmail.com");
+insert into buydisks values(466744862,"johnforge@gmail.com");
+insert into buydisks values(657984221,"johnforge@gmail.com");
+insert into buydisks values(654645699,"johnforge@gmail.com");
+insert into buydisks values(465487987,"johnforge@gmail.com");
+insert into buydisks values(154747521,"kbakugo@gmail.com");
+insert into buydisks values(466744862,"kbakugo@gmail.com");
+insert into buydisks values(154747521,"thebatman@gmail.com");
+insert into buydisks values(657984221,"woderwoman@gmail.com");
+insert into buydisks values(112354897,"woderwoman@gmail.com");
+insert into buydisks values(465487987,"woderwoman@gmail.com");
 /*aboutdisks*/
 insert into aboutdisks values(154747521,9,"johnwick@gmail.com","A classic wherever you go, can´t stop listening to it");
 insert into aboutdisks values(657984221,7,"johnwick@gmail.com","Pretty amazing, though not the best from them");
