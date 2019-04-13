@@ -150,4 +150,23 @@ insert into members values("56982314Q",456987123);
 insert into members values("02365987T",78965413);
 insert into members values("25634789A",698745123);
 insert into members values("44789652S",698745123);
-
+/*plays*/
+insert into plays values();
+/*composes*/
+insert into composes values();
+/*has*/
+insert into has values();
+/*members*/
+insert into members values();
+/*perform*/
+insert into perform values();
+/*record*/
+insert into record values();
+/*buytickets*/
+insert into buytickets values();
+/*buydisks*/
+insert into buydisks values();
+/*aboutdisks*/
+insert into aboutdisks values();
+/*aboutconcerts*/
+insert into aboutconcerts values();
