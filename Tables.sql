@@ -78,7 +78,7 @@ create table user
 (	name varchar(10),
  	surname varchar(10),
  	DNI	char(9),
-	email varchar(10),
+	email varchar(50),
     	points int,
     primary key (email)
 );
@@ -93,8 +93,8 @@ create table tickets
     foreign key(concertcode) references concerts(Code)
 );
 create table opinions
-(	opdescription varchar(500),
-	email varchar(10),
+(	email varchar(50),
+ 	opdescription varchar(500),
     primary key (email, opdescription),
     foreign key (email) references user(email)
 );
@@ -148,7 +148,7 @@ create table record
     );
 create table buytickets
 (	ticketcode	numeric(9,0),
-	email varchar(10),
+	email varchar(50),
 	primary key(ticketcode, email),
     foreign key(ticketcode) references tickets(ticketcode),
     foreign key(email) references user(email)
@@ -156,7 +156,7 @@ create table buytickets
 create table buydisks
 (
 	Referencenumber	 numeric(9,0),
-	email varchar(10),
+	email varchar(50),
 	primary key(Referencenumber, email),
     foreign key(Referencenumber) references disk(Referencenumber),
     foreign key(email) references user(email)
@@ -164,9 +164,9 @@ create table buydisks
 create table aboutdisks
 (
 	Referencenumber numeric(9,0),
-	opdescription	varchar(500),
 	rating		numeric(2,0) check rating<11,
-    	email	varchar(10),
+    	email	varchar(50),
+	opdescription	varchar(500),
 	primary key(Referencenumber, email),
     foreign key(Referencenumber) references disk(Referencenumber),
     foreign key(email) references opinions(email)
@@ -174,8 +174,8 @@ create table aboutdisks
 create table aboutconcerts
 (
 	Code	char(9),
+	email varchar(50),
 	opdescription	varchar(500),
-	email varchar(10),
 	primary key(Code, email),
     foreign key(Code) references concerts(Code),
     foreign key(email) references opinions(email)
