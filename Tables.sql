@@ -76,11 +76,11 @@ create table disk
 
 create table user
 (	name varchar(10),
+ 	surname varchar(10),
+ 	DNI	char(9),
 	email varchar(10),
-    points int,
-    surname varchar(10),
-    DNI		char(9),
-	primary key (email)
+    	points int,
+    primary key (email)
 );
 create table tickets
 (	ticketcode	numeric(9,0),
