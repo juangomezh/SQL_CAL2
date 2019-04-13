@@ -63,14 +63,14 @@ create table concerts
 create table disk
 (	Referencenumber numeric(9,0),
 	format		varchar(10), check (format in ("Digital","Physical")),
-	title	varchar(10),
-    	day	  numeric(2,0),
+	title	varchar(20),
+	day	  numeric(2,0),
  	month numeric(2,0),
  	year numeric(4,0),
-    	genre varchar(30),
+	genre varchar(30),
     	typeofencoding		varchar(10), check (typeofencoding in("MP3", "AAC", "WMA", "FLAC") and format in ("Digital")),
-    	Size	int,
-   	typeofphy	varchar(10), check (typeofphy in ("CD", "LP") and format in ("Physical")),
+	Size	int,
+		typeofphy	varchar(10), check (typeofphy in ("CD", "LP") and format in ("Physical")),
     primary key (Referencenumber)
 );
 
@@ -92,12 +92,7 @@ create table tickets
     primary key (ticketcode),
     foreign key(concertcode) references concerts(Code)
 );
-create table opinions
-(	email varchar(30),
- 	opdescription varchar(500),
-    primary key (email, opdescription),
-    foreign key (email) references user(email)
-);
+
 create table plays
 (	ID	char(9),
 	numserie numeric(10,0),
@@ -141,8 +136,8 @@ create table perform
     foreign key(Code) references concerts(Code)
     );
 create table record
-(	groupID	varchar(9),
-	Referencenumber numeric(9,0),
+(	Referencenumber numeric(9,0),
+    groupID	varchar(9),
     primary key(groupID, Referencenumber),
     foreign key(groupID) references musicgroup(groupID),
     foreign key(Referencenumber) references disk(Referencenumber)
@@ -165,19 +160,19 @@ create table buydisks
 create table aboutdisks
 (
 	Referencenumber numeric(9,0),
-	opdescription	varchar(500),
-	rating		numeric(2,0) check (rating<11),
-    	email	varchar(30),
-	primary key(Referencenumber, email),
+	rating		int check (rating<11),
+	email	varchar(30),
+    opdescription	varchar(500),
+	primary key(Referencenumber, email, opdescription),
     foreign key(Referencenumber) references disk(Referencenumber),
-    foreign key(email) references opinions(email)
+    foreign key(email) references user(email)
 );
 create table aboutconcerts
 (
 	Code	char(9),
+    email varchar(30),
 	opdescription	varchar(500),
-	email varchar(30),
-	primary key(Code, email),
+	primary key(Code, email, opdescription),
     foreign key(Code) references concerts(Code),
-    foreign key(email) references opinions(email)
+    foreign key(email) references user(email)
 );
