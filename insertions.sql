@@ -22,7 +22,7 @@ delete from disk;
 insert into musicians values("Pepe", "gonzalez", "55, Avda Caballeria Española", 288805, 1039485, "Madrid", "Madrid", "78009876S");
 insert into musicians values("Pedro", "gonzalez", "64, Calle Avila", 288804, 198456123, "Alcala de Henares", "Madrid", "55669987S");
 insert into musicians values("Edward", "Gomez", "11, Avda Figueroa", 288809, 102938659, "Guadalajara", "Guadalajara", "02369874P");
-insert into musicians values("Aria", "Stark", "7, Avda Aviacion Española", 102934, 978668756, "Guadarrama", "Madrid", "6598632W");
+insert into musicians values("Aria", "Stark", "7, Avda Aviacion Española", 102934, 978668756, "Guadarrama", "Madrid", "65986321W");
 insert into musicians values("Maria", "Broncano", "1, Avda Plus Ultra", 183746, 669958547, "Colmenar Viejo", "Madrid", "22589635T");
 insert into musicians values("Sansa", "Perez", "10, Avda los Afligidos", 192837, 609687745, "Barcelona", "Barcelona", "47896523R");
 insert into musicians values("Rob", "Hernandez", "24, Calle principe", 102554, 702691154, "Murcia", "Murcia", "56982314Q");
