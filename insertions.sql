@@ -261,4 +261,24 @@ insert into aboutdisks values(657984221,8,"woderwoman@gmail.com","Pretty impresi
 insert into aboutdisks values(112354897,8,"woderwoman@gmail.com","Amused in all senses");
 insert into aboutdisks values(465487987,7,"woderwoman@gmail.com","Liked this one quite a bit");
 /*aboutconcerts*/
-insert into aboutconcerts values();
+insert into aboutconcerts values("54786278D","johnwick@gmail.com","Simply unbelievable");
+insert into aboutconcerts values("54786278D","deku@gmail.com","Great experience in the concert");
+insert into aboutconcerts values("54786278D","woderwoman@gmail.com","Much better live that recorded");
+insert into aboutconcerts values("89765435T","kbakugo@gmail.com","I would repeat any time");
+insert into aboutconcerts values("89765435T","thanosthedestroyer@gmail.com","Quite good, i've seen better though");
+insert into aboutconcerts values("35554867P","johnforge@gmail.com","I really liked this concert, wan´t to repeat asap");
+insert into aboutconcerts values("35554867P","deku@gmail.com","That was wild, huge fan");
+insert into aboutconcerts values("35554867P","thanosthedestroyer@gmail.com","Got better with every song played");
+insert into aboutconcerts values("35554867P","woderwoman@gmail.com","Really like this group, concert was great");
+insert into aboutconcerts values("89256798J","johnwick@gmail.com","Entonation was perfect except for some disonnties in interpretation");
+insert into aboutconcerts values("89256798J","woderwoman@gmail.com","Concert was good, volume a bit to high for me");
+insert into aboutconcerts values("57934615L","deku@gmail.com","What a pleasure");
+insert into aboutconcerts values("20201537A","johnwick@gmail.com","Didn't really like it, performance was not bad though");
+insert into aboutconcerts values("20201537A","woderwoman@gmail.com","That was incredible, loved it!");
+insert into aboutconcerts values("66554785S","deku@gmail.com","Aw man, that was so good!");
+insert into aboutconcerts values("66554785S","thebatman@gmail.com","Not gonna lie, i've seen better");
+insert into aboutconcerts values("66554785S","johnforge@gmail.com","That was so good I want to repeat");
+insert into aboutconcerts values("65233114B","kbakugo@gmail.com","Didn´t like the playback");
+insert into aboutconcerts values("65233114B","deku@gmail.com","Expectations, huge dissapointment though");
+insert into aboutconcerts values("65233114B","thebatman@gmail.com","Really liked it, last song was the best");
+insert into aboutconcerts values("65233114B","woderwoman@gmail.com","Good enough for me, enjoyed it");
