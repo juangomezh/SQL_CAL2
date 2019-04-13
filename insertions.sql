@@ -97,7 +97,7 @@ insert into disk values(657984221,"Physical","Drones",25,10,2001,"Heavy Metal",n
 insert into disk values(112354897,"Physical","Muse",21,06,2003,"Jazz",null,2,"CD");
 insert into disk values(654645699,"Digital","Origins",27,12,2006,"Pop","WMA",3,null);
 insert into disk values(465487987,"Digital","Meteora",13,10,2012,"Alternative","AAC",5,null);
-insert into disk values(466744862,"Digital","The Hunting Party","Punk","FLAC",7,null);
+insert into disk values(466744862,"Digital","The Hunting Party",16,07,2010,"Punk","FLAC",7,null);
 /*user*/
 insert into user values("John","Wick","78946254G","johnwick@gmail.com");
 /*members*/
