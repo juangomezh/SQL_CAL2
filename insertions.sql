@@ -18,6 +18,7 @@ delete from musician;
 delete from tickets;
 delete from user;
 delete from disk;
+/*musicians*/
 insert musicians values("Pepe", "gonzalez", "55, Avda Caballeria Española", 288805, 1039485, "Madrid", "Madrid", "78009876S");
 insert musicians values("Pedro", "gonzalez", "64, Calle Avila", 288804, 198456123, "Alcala de Henares", "Madrid", "55669987S");
 insert musicians values("Edward", "Gomez", "11, Avda Figueroa", 288809, 102938659, "Guadalajara", "Guadalajara", "02369874P");
@@ -28,6 +29,7 @@ insert musicians values("Rob", "Hernandez", "24, Calle principe", 102554, 702691
 insert musicians values("Daneris", "Herrero", "34, Calle princesa", 009958, 601253396, "Malaga", "Malaga", "02365987T");
 insert musicians values("Edward", "Elric", "4, Avda Aguadores", 229938, 345698875, "Salamanca", "Salamanca", "25634789A");
 insert musicians values("Alphonse", "Morales", "9, Avda Casillas", 220033, 346589967, "Las Torres", "Salamanca", "44789652S");
+/*instruments*/
 insert instrument values("Saxophone", 4569874526);
 insert instrument values("Saxophone", 4569456987);
 insert instrument values("Saxophone", 4562103256);
@@ -38,6 +40,7 @@ insert instrument values("Guitar", 9872031648);
 insert instrument values("Voice", null);
 insert instrument values("Piano", 5264568752);
 insert instrument values("Piano", 5267987987);
+/*plays*/
 insert plays values("78009876S",4569874526);
 insert plays values("55669987S",4565456987);
 insert plays values("02369874P",4562103256);
@@ -48,6 +51,7 @@ insert plays values("56982314Q",9872031648);
 insert plays values("02365987T",null);
 insert plays values("25634789A",5264568752);
 insert plays values("44789652S",5267987987);
+/*songs*/
 insert song values(120, 20, 3, 2019, "titanic", "78009876S");
 insert song values(345, 1, 4, 2002, "titanium", "78009876S");
 insert song values(234, 12, 9, 2009, "Ocean", "56982314Q");
@@ -60,6 +64,7 @@ insert song values(102, 12, 8, 2003, "Wake me up", "44789652S");
 insert song values(180, 31, 2, 2004,"Ease my mind", "02365987T" );
 insert song values(230, 2, 5, 1999, "Revolution",  "02365987T");
 insert song values(257, 31, 12, 1968, "Million voices",  "02365987T");
+/*composes*/
 insert composes values(120, "titanic", "78009876S");
 insert composes values(345, "titanium", "78009876S");
 insert composes values(234, "Ocean", "56982314Q");
@@ -72,10 +77,12 @@ insert composes values(102, "Wake me up", "44789652S");
 insert composes values(180, "Ease my mind", "02365987T" );
 insert composes values(230, "Revolution",  "02365987T");
 insert composes values(257, "Million voices",  "02365987T");
+/*musicgroup*/
 insert musicgroup values("Jazz", 456987123);
 insert musicgroup values("Rock", 789654132);
 insert musicgroup values("Heavy Metal", 012365487);
 insert musicgroup values("EDM", 698745123);
+/*members*/
 insert members values("78009876S",456987123);
 insert members values("55669987S",456987123);
 insert members values("02369874P", 012365487);
