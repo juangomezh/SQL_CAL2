@@ -91,13 +91,30 @@ insert into concerts values("Sao Paulo Center","Lisbon","Portugal",12,09,2006,"5
 insert into concerts values("Palau Sant Jordi","Barcelona","Spain",25,03,2019,"20201537A");
 insert into concerts values("Oxford Street","London","England",01,02,2002,"66554785S");
 insert into concerts values("Atlantic Avenue","Rio de Janeiro","Brazil",05,11,2018,"65233114B");
+/*perform*/
+insert into concerts values(456987123,"54786278D");
+insert into concerts values(789654132,"54786278D");
+insert into concerts values(698745123,"54786278D");
+insert into concerts values(456987123,"89765435T");
+insert into concerts values(789654132,"89765435T");
+insert into concerts values(456987123,"35554867P");
+insert into concerts values(789654132,"89256798J");
+insert into concerts values(456987123,"89256798J");
+insert into concerts values(012365487,"89256798J");
+insert into concerts values(012365487,"57934615L");
+insert into concerts values(789654132,"20201537A");
+insert into concerts values(698745123,"20201537A");
+insert into concerts values(789654132,"66554785S");
+insert into concerts values(698745123,"66554785S");
+insert into concerts values(012365487,"66554785S");
+
 /*disk*/
 insert into disk values(154747521,"Digital","Let it be",17,02,1998,"Rock","MP3",3,null);
 insert into disk values(657984221,"Physical","Drones",25,10,2001,"Heavy Metal",null,4,"LP");
 insert into disk values(112354897,"Physical","Muse",21,06,2003,"Jazz",null,2,"CD");
 insert into disk values(654645699,"Digital","Origins",27,12,2006,"Pop","WMA",3,null);
 insert into disk values(465487987,"Digital","Meteora",13,10,2012,"Alternative","AAC",5,null);
-insert into disk values(466744862,"Digital","The Hunting Party",16,07,2010,"Punk","FLAC",7,null);
+insert into disk values(466744862,"Digital","The Hunting Party","Punk","FLAC",7,null);
 /*user*/
 insert into user values("John","Wick","78946254G","johnwick@gmail.com");
 /*members*/
@@ -111,3 +128,4 @@ insert into members values("56982314Q",456987123);
 insert into members values("02365987T",78965413);
 insert into members values("25634789A",698745123);
 insert into members values("44789652S",698745123);
+
