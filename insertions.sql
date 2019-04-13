@@ -150,25 +150,8 @@ insert into members values("56982314Q",456987123);
 insert into members values("02365987T",78965413);
 insert into members values("25634789A",698745123);
 insert into members values("44789652S",698745123);
-/*plays*/
-insert into plays values("78009876S",4569874526);
-insert into plays values("55669987S",4569456987);
-insert into plays values("02369874P",4562103256);
-insert into plays values("65986321W",4567775550);
-insert into plays values("22589635T",9874563215);
-insert into plays values("47896523R",9877896543);
-insert into plays values("78009876S",9872031648);
-insert into plays values("56982314Q",null);
-insert into plays values("02365987T",5264568752);
-insert into plays values("25634789A",5267987987);
-/*composes*/
-insert into composes values();
 /*has*/
 insert into has values();
-/*members*/
-insert into members values();
-/*perform*/
-insert into perform values();
 /*record*/
 insert into record values();
 /*buytickets*/
