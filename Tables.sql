@@ -64,13 +64,13 @@ create table disk
 (	Referencenumber numeric(9,0),
 	format		varchar(10), check (format in ("Digital","Physical")),
 	title	varchar(10),
-    year numeric(4,0),
-    month numeric(2,0),
-    day	  numeric(2,0),
-    genre varchar(10),
-    typeofencoding		varchar(10), check (typeofencoding in("MP3", "AAC", "WMA", "FLAC") and format in ("Digital")),
-    Size	int,
-    typeofphy	varchar(10), check (typeofphy in ("CD", "LP") and format in ("Physical")),
+    	day	  numeric(2,0),
+ 	month numeric(2,0),
+ 	year numeric(4,0),
+    	genre varchar(10),
+    	typeofencoding		varchar(10), check (typeofencoding in("MP3", "AAC", "WMA", "FLAC") and format in ("Digital")),
+    	Size	int,
+   	typeofphy	varchar(10), check (typeofphy in ("CD", "LP") and format in ("Physical")),
     primary key (Referencenumber)
 );
 
@@ -85,9 +85,9 @@ create table user
 create table tickets
 (	ticketcode	numeric(9,0),
 	concertcode char(9),
-	year numeric(4,0),
-    month numeric(2,0),
-    day	  numeric(2,0),
+	day	  numeric(2,0),
+ 	month numeric(2,0),
+ 	year numeric(4,0),
     price int,
     primary key (ticketcode),
     foreign key(concertcode) references concerts(Code)
@@ -115,9 +115,9 @@ create table composes
 create table has
 (	Referencenumber numeric(9,0),
 	duration		int,
-    year numeric(4,0),
-    day numeric(2,0),
-    month numeric(2,0),
+    	day	  numeric(2,0),
+ 	month numeric(2,0),
+ 	year numeric(4,0),
 	name varchar(10),
     ID	char(9),
     primary Key(Referencenumber, ID), 
