@@ -177,32 +177,18 @@ insert into has values(657984221,257, 31, 12, 1968, "Million voices",  "02365987
 insert into has values(154747521,257, 31, 12, 1968, "Million voices",  "02365987T");
 insert into has values(112354897,257, 31, 12, 1968, "Million voices",  "02365987T");
 /*record*/
-/*insert into record values(154747521, 456987123);
-insert into record values(657984221, 456987123);
-insert into record values(613214786, 456987123);
-insert into record values(154747521, 456987123);
-insert into record values(564798113, 456987123);
-insert into record values(613214786, 456987123);
-insert into record values(112354897, 456987123);
-insert into record values(154747521, 456987123);
-insert into record values(657984221, 456987123);
-insert into record values(112354897, 456987123);
-insert into record values(112354897, 456987123);
-insert into record values(154747521, 456987123);
-insert into record values(613214786, 456987123);
-insert into record values(564798113, 456987123);
-insert into record values(112354897, 012365487);
-insert into record values(654645699, 012365487);
-insert into record values(154747521, 012365487);
-insert into record values(154747521, 698745123);
-insert into record values(613214786, 78965413);
-insert into record values(154747521, 78965413);
-insert into record values(613214786, 78965413);
-insert into record values(154747521, 78965413);
-insert into record values(566578112, 78965413);
-insert into record values(613214786, 78965413);
-insert into record values(154747521, 78965413);
-insert into record values(613214786, 78965413);*/
+insert into record values(154747521,456987123);
+insert into record values(657984221,456987123);
+insert into record values(465487987,456987123);
+insert into record values(466744862,456987123);
+insert into record values(112354897,456987123);
+insert into record values(112354897,012365487);
+insert into record values(654645699,012365487);
+insert into record values(154747521,012365487);
+insert into record values(154747521,698745123);
+insert into record values(465487987,789654132);
+insert into record values(154747521,789654132);
+insert into record values(112354897,789654132);
 /*buytickets*/
 insert into buytickets values(665897554,"deku@gmail.com");
 insert into buytickets values(654214156,"kbakugo@gmail.com");
