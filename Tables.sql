@@ -37,9 +37,9 @@ create table instrument
 );
 create table song
 (	duration int,
-	year numeric(4,0),
     day numeric(2,0),
     month numeric(2,0),
+    year numeric(4,0),
 	name varchar(10),
     ID char(9),
     primary key (ID, duration, name),
@@ -51,13 +51,13 @@ create table musicgroup
     primary key (groupID)
 );
 create table concerts
-(	venue	varchar(10),
-	City	varchar(10),
-    Country	varchar(10),
-	year numeric(4,0),
-    month numeric(4,0),
-    day	  numeric(2,0),
-    Code	char(9),
+(	venue	varchar(50),
+	City	varchar(50),
+    	Country	varchar(50),
+   	day	  numeric(2,0),
+ 	month numeric(2,0),
+ 	year numeric(4,0),
+    	Code	char(9),
     primary key (Code)
 );
 create table disk
@@ -65,7 +65,7 @@ create table disk
 	format		varchar(10), check (format in ("Digital","Physical")),
 	title	varchar(10),
     year numeric(4,0),
-    month numeric(4,0),
+    month numeric(2,0),
     day	  numeric(2,0),
     genre varchar(10),
     typeofencoding		varchar(10), check (typeofencoding in("MP3", "AAC", "WMA", "FLAC") and format in ("Digital")),
@@ -86,7 +86,7 @@ create table tickets
 (	ticketcode	numeric(9,0),
 	concertcode char(9),
 	year numeric(4,0),
-    month numeric(4,0),
+    month numeric(2,0),
     day	  numeric(2,0),
     price int,
     primary key (ticketcode),
@@ -165,8 +165,8 @@ create table aboutdisks
 (
 	Referencenumber numeric(9,0),
 	opdescription	varchar(500),
-	rating		numeric(10,0),
-    email	varchar(10),
+	rating		numeric(2,0) check rating<11,
+    	email	varchar(10),
 	primary key(Referencenumber, email),
     foreign key(Referencenumber) references disk(Referencenumber),
     foreign key(email) references opinions(email)
