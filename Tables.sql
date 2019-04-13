@@ -63,7 +63,7 @@ create table concerts
 create table disk
 (	Referencenumber numeric(9,0),
 	format		varchar(10), check (format in ("Digital","Physical")),
-	title	varchar(20),
+	title	varchar(50),
 	day	  numeric(2,0),
  	month numeric(2,0),
  	year numeric(4,0),
