@@ -115,7 +115,23 @@ insert into disk values(654645699,"Digital","Origins",27,12,2006,"Pop","WMA",3,n
 insert into disk values(465487987,"Digital","Meteora",13,10,2012,"Alternative","AAC",5,null);
 insert into disk values(466744862,"Digital","The Hunting Party","Punk","FLAC",7,null);
 /*user*/
-insert into user values("John","Wick","78946254G","johnwick@gmail.com");
+insert into user values("John","Wick","78946254G","johnwick@gmail.com",120);
+insert into user values("Thanos","Allmighty","66566512T","thanosthedestroyer@gmail.com",25);
+insert into user values("Izuku","Midoriya","87964521I","deku@gmail.com",100);
+insert into user values("John","Forge","11798654J","johnforge@gmail.com",17);
+insert into user values("Katsuki","Bakugo","45457896B","kbakugo@gmail.com",90);
+insert into user values("Bruce","Wayne","63636354B","thebatman@gmail.com",99);
+insert into user values("Diana","Prince","99658742P","woderwoman@gmail.com",56);
+/*tickets*/
+insert into tickets values(665897554,"54786278D",26,04,2018,40);
+insert into tickets values(654214156,"89765435T",04,05,2020,52);
+insert into tickets values(564798113,"35554867P",02,02,2013,60);
+insert into tickets values(889444954,"89256798J",06,08,2014,30);
+insert into tickets values(798977426,"57934615L",12,09,2006,73);
+insert into tickets values(645213698,"20201537A",25,03,2019,39);
+insert into tickets values(566578112,"66554785S",01,02,2002,41);
+insert into tickets values(613214786,"65233114B",05,11,2018,83);
+/*opinions*/
 /*members*/
 insert into members values("78009876S",456987123);
 insert into members values("55669987S",456987123);
