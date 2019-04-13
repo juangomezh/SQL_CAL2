@@ -3,29 +3,29 @@ select musicgroup.genre, musicgroup.groupID
 from musicgroup where musicgroup.genre like "Jazz";
 /*EX2*/
 select musician.name from musician, plays, instrument
-where musician.ID=plays.ID and plays.numserie=instrument.numserie and instrument.name like "drums";
+where musician.ID=plays.ID and plays.numserie=instrument.numserie and instrument.name like "Drum";
 /*Ex3*/
 select musician.name from musician, plays, instrument, musicgroup
 where musicgroup.genre like "Jazz" and musician.ID=plays.ID and instrument.numserie=plays.numserie
 and instrument.name like "saxophone";
 /*EX4*/
-select musicgroup.groupID from musicgroup, concerts
+select distinct musicgroup.groupID from musicgroup, concerts
 where concerts.Country like "Spain";
 /*EX5*/
 select D.Referencenumber
 	from disks as D 
-		where (select count(distinct has.name) from disks as D1 natural join has where D1.Referencenumber=D.Referencenumber)>10;
+		where (select count(distinct has.name) from disks as D1, has where  has.Referencenumber=D1.Referencenumber and D1.Referencenumber=D.Referencenumber)>10;
 /*EX6*/
 select musicgroup.* from musicgroup, musician, members, 
 	(select count(distinct members.ID) as numero, members.ID as dnis from members group by members.ID) as pp
 		where members.id=dnis and musicgroup.groupID=members.groupID and numero>3;
 /*EX7*/
-select opinions.opdescription 
-	from opinions, buydisks, user, (select count(distinct buydisks.email) as cantidad, buydisks.email as codigo from buydisks group by buydisks.Referencenumber) as pp
-		where cantidad>3 and buydisks.email=codigo and opinions.email=user.email and customer.DNI=buydisks.email;
+select aboutdisks.opdescription 
+	from aboutdisks, buydisks, user, (select count(distinct buydisks.email) as cantidad, buydisks.email as codigo from buydisks group by buydisks.Referencenumber) as pp
+		where cantidad>3 and buydisks.email=codigo and aboutdisks.email=user.email and user.DNI=buydisks.email;
 /*EX8*/
 select disk.title, disk.Referencenumber 
-	from disk inner join has on disk.Referencenumber = has.disk.Referencenumber
+	from disk inner join has on disk.Referencenumber = disk.Referencenumber
 		where has.duration>5 and disk.format = "Physical" and disk.typeofphy = "CD";
 /*EX9*/
 select musician.name from musicgroup, perform, musician, concerts, members, tickets
@@ -40,9 +40,10 @@ members.groupID=musicgroup.groupID and members.ID=musician.ID;
 select song.*, musician.name from (((musician natural join composes) natural join song) natural join has) natural join disks
 where disks.genre like "Heavy Metal" and disks.year=2018;
 /*EX12*/
-select musician.name from musician, plays, instrument, musicgroup, members
-where musicgroup.genre like "Jazz" and musician.ID=members.ID and members.ID=musicgroup.groupID
-and plays.ID=musician.ID and instrument.numserie=plays.numserie and instrument like "guitar";
+select musician.name 
+from musician, plays, instrument, musicgroup, members
+where musicgroup.genre like "jazz" and musician.ID=members.ID and members.ID=musicgroup.groupID
+and plays.ID=musician.ID and instrument.numserie=plays.numserie and instrument.name like "Guitar";
 /*EX13*/
 select user.name, user.surname
 	from user, tickets inner join concerts on tickets.concertcode=concerts.Code, perform inner join concerts on perform.Code=concerts.Code, perform inner join musicgroup on perform.groupID=musicgroup.groupID
@@ -51,7 +52,7 @@ select user.name, user.surname
         and exists(select buytickets where buytickets.email=user.email and buytickets.ticketcode=tickets.ticketcode);
 /*EX14*/
 select disk.title, song.name 
-	from disk inner join has on has.Referencenumber = disk.Referencenumber inner join song on song.name = has.name inner join aboutdisks on disks.Referencenumber = disk.Referencenumber
+	from disk inner join has on has.Referencenumber = disk.Referencenumber inner join song on song.name = has.name inner join aboutdisks on disk.Referencenumber = disk.Referencenumber
 where aboutdisks.rating>8;
 /*EX15*/
 select musicgroup.*, members.ID from musicgroup inner join members on members.groupID=musicgroup.groupID

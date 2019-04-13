@@ -31,7 +31,7 @@ insert into musician values("Alphonse", "Morales", "9, Avda Casillas", 220033, 3
 insert into instrument values("Saxophone", 4569874526);
 insert into instrument values("Saxophone", 4569456987);
 insert into instrument values("Saxophone", 4562103256);
-insert into instrument values("Saxophone", 4567775550);
+insert into instrument values("Drum", 4567775550);
 insert into instrument values("Guitar", 9874563215);
 insert into instrument values("Guitar", 9877896543);
 insert into instrument values("Guitar", 9872031648);
