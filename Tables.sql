@@ -9,15 +9,16 @@ drop table if exists buytickets;
 drop table if exists buydisks;
 drop table if exists perform;
 drop table if exists musicgroup;
-drop table if exists song;
 drop table if exists instrument;
 drop table if exists has;
 drop table if exists composes;
-drop table if exists concerts;
+drop table if exists song;
+
 drop table if exists musician;
 drop table if exists tickets;
 drop table if exists user;
 drop table if exists disk;
+drop table if exists concerts;
 
 create table musician
 (	name varchar(10),
@@ -40,9 +41,9 @@ create table song
     day numeric(2,0),
     month numeric(2,0),
     year numeric(4,0),
-	name varchar(10),
+	name varchar(20),
     ID char(9),
-    primary key (ID, duration, name),
+    primary key (name, ID),
     foreign key (ID) references musician (ID)
 );
 create table musicgroup
@@ -76,11 +77,11 @@ create table disk
 
 create table user
 (	name varchar(10),
- 	surname varchar(10),
- 	DNI	char(9),
-	email varchar(50),
-    	points int,
-    primary key (email)
+	email varchar(10),
+    points int,
+    surname varchar(10),
+    DNI		char(9),
+	primary key (email)
 );
 create table tickets
 (	ticketcode	numeric(9,0),
@@ -93,8 +94,8 @@ create table tickets
     foreign key(concertcode) references concerts(Code)
 );
 create table opinions
-(	email varchar(50),
- 	opdescription varchar(500),
+(	opdescription varchar(500),
+	email varchar(10),
     primary key (email, opdescription),
     foreign key (email) references user(email)
 );
@@ -106,21 +107,22 @@ create table plays
     foreign key (numserie) references instrument(numserie)
 );
 create table composes
-(	ID varchar(9),
-	duration int,
-	name varchar(10),
-    primary key(ID),
+(	duration int,
+	name varchar(20),
+    ID varchar(9),
+    primary key(ID, name),
+    foreign key(name) references song(name),
     foreign key(ID) references musician(ID)
 );
 create table has
 (	Referencenumber numeric(9,0),
 	duration		int,
-    	day	  numeric(2,0),
+	day	  numeric(2,0),
  	month numeric(2,0),
  	year numeric(4,0),
-	name varchar(10),
+	name varchar(20),
     ID	char(9),
-    primary Key(Referencenumber, ID), 
+    primary Key(Referencenumber, ID, duration, name), 
     foreign Key(Referencenumber) references disk(Referencenumber),
     foreign Key(ID) references musician(ID),
     foreign Key(name) references song(name)
@@ -148,7 +150,7 @@ create table record
     );
 create table buytickets
 (	ticketcode	numeric(9,0),
-	email varchar(50),
+	email varchar(10),
 	primary key(ticketcode, email),
     foreign key(ticketcode) references tickets(ticketcode),
     foreign key(email) references user(email)
@@ -156,7 +158,7 @@ create table buytickets
 create table buydisks
 (
 	Referencenumber	 numeric(9,0),
-	email varchar(50),
+	email varchar(10),
 	primary key(Referencenumber, email),
     foreign key(Referencenumber) references disk(Referencenumber),
     foreign key(email) references user(email)
@@ -164,9 +166,9 @@ create table buydisks
 create table aboutdisks
 (
 	Referencenumber numeric(9,0),
-	rating		numeric(2,0) check rating<11,
-    	email	varchar(50),
 	opdescription	varchar(500),
+	rating		numeric(2,0) check (rating<11),
+    	email	varchar(10),
 	primary key(Referencenumber, email),
     foreign key(Referencenumber) references disk(Referencenumber),
     foreign key(email) references opinions(email)
@@ -174,8 +176,8 @@ create table aboutdisks
 create table aboutconcerts
 (
 	Code	char(9),
-	email varchar(50),
 	opdescription	varchar(500),
+	email varchar(10),
 	primary key(Code, email),
     foreign key(Code) references concerts(Code),
     foreign key(email) references opinions(email)
